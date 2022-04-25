@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-socketio-iim-a4-dw2-nouilles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "run": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IIM-Creative-Technology/NODEJS-SOCKETIO-IIM-A4-DW2-NOUILLES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IIM-Creative-Technology/NODEJS-SOCKETIO-IIM-A4-DW2-NOUILLES/issues"
+  },
+  "homepage": "https://github.com/IIM-Creative-Technology/NODEJS-SOCKETIO-IIM-A4-DW2-NOUILLES#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
