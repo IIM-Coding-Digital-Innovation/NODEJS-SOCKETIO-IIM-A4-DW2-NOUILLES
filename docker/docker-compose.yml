@@ -12,6 +12,7 @@ services:
     environment:
       CONNECTION_STRING: "postgresql://${DB_USER}:${DB_PASSWORD}@db:${DB_PORT}/${DB_DATABASE}"
       SERVER_PORT: ${SERVER_PORT}
+      NODE_ENV: dev
     ports:
       - "${SERVER_PORT}:${SERVER_PORT}"
     volumes:
