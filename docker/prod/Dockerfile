@@ -1,7 +1,13 @@
 FROM node:18-alpine3.14
 
-RUN npm install
+RUN mkdir /app
+WORKDIR /app
+# Install the dependencies
+COPY package.json ./
+RUN npm install --omit dev
+# Copy the source files
+COPY . .
 
-EXPOSE $SERVER_PORT
-
-CMD npm dev
+# Start the server
+EXPOSE ${SERVER_PORT}
+CMD npm run start
