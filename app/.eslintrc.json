@@ -15,6 +15,7 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "object-curly-spacing": "off"
     }
 }
