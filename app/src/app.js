@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 const startServer = async () => {
     try {
         await sequelizeInstance.authenticate();
-        console.log('Connection with database has been established successfully.');
+        console.log('Connection with database has been established successfully !');
         app.listen(port, () => {
             console.log(`Server listening on http://127.0.0.1:${port}`);
         });
