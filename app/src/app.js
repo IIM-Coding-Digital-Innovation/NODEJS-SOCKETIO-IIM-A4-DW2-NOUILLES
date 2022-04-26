@@ -1,6 +1,6 @@
 const express = require('express')
 
-const router = require('./router/router')
+const {router} = require('./router/v1.router')
 
 const app = express()
 const port = process.env.SERVER_PORT
