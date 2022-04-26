@@ -1,5 +1,8 @@
 # NODEJS-SOCKETIO-IIM-A4-DW2-NOUILLES
 
+## Mettre en place docker
+Installer Docker Desktop : https://www.docker.com/products/docker-desktop/
+
 ## Environnement de dev
 Lancer `cd docker ; docker-compose up -d`
 
