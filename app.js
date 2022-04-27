@@ -2,6 +2,7 @@ const express = require('express');
 //const { sequelizeInstance } = require('./utils/database');
 const path = require("path");
 const userAPI = require('./src/api/user/routes')
+const sequelize = require('./models/index')
 
 const app = express();
 const port = process.env.SERVER_PORT;
@@ -16,16 +17,14 @@ app.listen(process.env.PORT || 3000, () => {
 
 userAPI.createRoutes(app);
 
-const startServer = async () => {
+async function main() {
   try {
-    await sequelizeInstance.authenticate();
-    console.log('Connection with database has been established successfully.');
-    app.listen(port, () => {
-      console.log(`Server listening on http://127.0.0.1:${port}`);
-    });
+    await sequelize.authenticate();
+    console.log('Connection has been established successfully.');
   } catch (error) {
     console.error('Unable to connect to the database:', error);
   }
-};
+}
+main()
 
 // startServer();
