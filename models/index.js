@@ -2,8 +2,7 @@
 
 const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
-const config = require(dirname + '/config/config.json')[env];
-const db = {};
+const config = require('/config/config.json')[env];
 
 const {Post, Author} = require('/models');
 
