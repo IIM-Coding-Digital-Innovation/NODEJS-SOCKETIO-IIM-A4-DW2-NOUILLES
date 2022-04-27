@@ -1,1 +1,1 @@
-web: node ./app/src/app.js
+web: cd app && node app.js

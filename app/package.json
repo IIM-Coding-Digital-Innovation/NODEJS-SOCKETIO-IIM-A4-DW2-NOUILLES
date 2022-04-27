@@ -2,10 +2,10 @@
   "name": "nodejs-socketio-iim-a4-dw2-nouilles",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon -L src/app.js",
-    "start": "node src/app.js",
+    "dev": "nodemon -L app.js",
+    "start": "node app.js",
     "commit": "cz",
     "test": "jest"
   },

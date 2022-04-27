@@ -1,13 +1,13 @@
 const express = require('express');
 //const { sequelizeInstance } = require('./utils/database');
 const path = require("path");
-const userAPI = require('./api/user/routes')
+const userAPI = require('./src/api/user/routes')
 
 const app = express();
 const port = process.env.SERVER_PORT;
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'))
+  res.sendFile(path.join(__dirname, '/src/index.html'))
 })
 
 app.listen(port, () => {
