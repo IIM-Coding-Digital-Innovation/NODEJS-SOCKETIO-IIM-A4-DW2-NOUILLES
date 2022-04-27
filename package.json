@@ -4,10 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon -L app.js",
+    "dev": "app/node_modules/.bin/nodemon -L app.js",
     "start": "node app.js",
-    "commit": "cz",
-    "test": "jest"
+    "commit": "app/node_modules/.bin/cz",
+    "test": "app/node_modules/.bin/jest",
+    "build": "npm install"
   },
   "repository": {
     "type": "git",

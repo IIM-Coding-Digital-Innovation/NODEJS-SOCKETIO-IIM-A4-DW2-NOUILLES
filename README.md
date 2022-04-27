@@ -14,3 +14,11 @@ Lancer `cd app ; npm install <modulename> ; cd ../docker ; docker-compose up -d 
 
 ## Retrait d'une dépendance dans node-modules
 Lancer `cd app ; npm uninstall <modulename> ; cd ../docker ; docker-compose up -d --build`
+
+## Host
+That project is host with heroku.
+
+| Environment | URL                                                                                                         |
+|-------------| ----------------------------------------------------------------------------------------------------------- |
+| Prod        | <a href="https://node-socket-iwm-nouille-prod.herokuapp.com/">https://node-socket-iwm-nouille-prod.herokuapp.com/       |
+| Dev         | <a href="https://node-socket-iwm-nouille-dev.herokuapp.com/">https://node-socket-iwm-nouille-dev.herokuapp.com/ |
