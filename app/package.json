@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon -L src/app.js",
     "start": "node src/app.js",
-    "commit": "cz"
+    "commit": "cz",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "eslint-plugin-n": "^15.2.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.0.2",
     "nodemon": "^2.0.15",
     "prettier": "^2.6.2"
   }
