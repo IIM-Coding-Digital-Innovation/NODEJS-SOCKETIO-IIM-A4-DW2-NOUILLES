@@ -1,5 +1,6 @@
 const express = require('express');
 const { sequelizeInstance } = require('./utils/database');
+const userAPI = require('./api/user/routes')
 
 const app = express();
 const port = process.env.SERVER_PORT;
@@ -7,6 +8,8 @@ const port = process.env.SERVER_PORT;
 app.get('/', (req, res) => {
   res.send('Goodnight World!');
 });
+
+userAPI.createRoutes(app);
 
 const startServer = async () => {
   try {
