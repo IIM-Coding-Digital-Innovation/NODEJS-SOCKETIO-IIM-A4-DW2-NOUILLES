@@ -22,3 +22,51 @@ That project is host with heroku.
 |-------------| ----------------------------------------------------------------------------------------------------------- |
 | Prod        | <a href="https://node-socket-iwm-nouille-prod.herokuapp.com/">https://node-socket-iwm-nouille-prod.herokuapp.com/       |
 | Dev         | <a href="https://node-socket-iwm-nouille-dev.herokuapp.com/">https://node-socket-iwm-nouille-dev.herokuapp.com/ |
+
+## Install
+cd app
+
+npm i
+
+npx sequelize-cli init
+
+Complete the file config/config.json with the informations of your database.
+
+
+{
+"development": {
+"username": "root",
+"password": null,
+"database": "database_development",
+"host": "127.0.0.1",
+"dialect": "mysql"
+},
+"test": {
+"username": "root",
+"password": null,
+"database": "database_test",
+"host": "127.0.0.1",
+"dialect": "mysql"
+},
+"production": {
+"username": "root",
+"password": null,
+"database": "database_production",
+"host": "127.0.0.1",
+"dialect": "mysql"
+}
+}
+
+
+Migrate the tables to your PostgreSQL database.
+
+npx sequelize-cli db:migrate
+
+Command for the creation of your migrations :
+
+
+npx sequelize-cli model:generate --name User --attributes email:string,password:string,role:string,firstname:string,lastname:string
+
+
+`
+npx sequelize-cli model:generate --name Task --attributes title:string
