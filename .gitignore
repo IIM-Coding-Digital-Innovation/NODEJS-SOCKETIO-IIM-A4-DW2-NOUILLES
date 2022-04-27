@@ -3,6 +3,3 @@
 node_modules
 .env
 db/*
-config/
-config/*
-config/config.json
