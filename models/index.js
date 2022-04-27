@@ -7,7 +7,7 @@ const config = require('/config/config.json')[env];
 const {Post, Author} = require('/models');
 
 let sequelize;
-if (config.env) {
+if (process.env.NODE_ENV !== 'develop') {
     sequelize = new Sequelize(process.env[config.env], config);
 } else {
     sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
