@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/src/index.html'))
 })
 
-app.listen(port, () => {
-  console.log(`Server listening on http://127.0.0.1:${port}`);
-});
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`Example app listening on port 3000`)
+})
 
 userAPI.createRoutes(app);
 

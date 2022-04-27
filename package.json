@@ -7,7 +7,8 @@
     "dev": "app/node_modules/.bin/nodemon -L app.js",
     "start": "node app.js",
     "commit": "app/node_modules/.bin/cz",
-    "test": "app/node_modules/.bin/jest"
+    "test": "app/node_modules/.bin/jest",
+    "build": "npm install"
   },
   "repository": {
     "type": "git",
