@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 const env = process.env.NODE_ENV || 'development';
 //const config = require('/config/config.json')[env];
 
-const {Post, Author} = require('/models');
+const {Post, Author} = require('models');
 
 let sequelize;
 sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
