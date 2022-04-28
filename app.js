@@ -2,7 +2,7 @@ const express = require('express');
 //const { sequelizeInstance } = require('./utils/database');
 const path = require("path");
 const userAPI = require('./src/api/user/routes')
-const sequelize = require('./models/index')
+const { sequelize } = require('./models/index')
 
 const app = express();
 const port = process.env.SERVER_PORT;
