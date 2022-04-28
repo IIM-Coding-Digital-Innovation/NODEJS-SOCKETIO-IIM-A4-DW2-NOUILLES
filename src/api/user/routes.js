@@ -39,9 +39,9 @@ const update = (app) => {
   });
 };
 const del = (app) => {
-  app.delete('/user:id', async (req, res) => {
+  app.delete('/user', (req, res) => {
       const idSended = req.body.id;
-      const deletedUser = await User.destroy({where: {id: idSended}});
+      const deletedUser =  User.destroy(idSended);
       res.send(deletedUser);
   });
 };
