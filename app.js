@@ -3,9 +3,14 @@ const express = require('express');
 const path = require("path");
 const userAPI = require('./src/api/user/routes')
 const { sequelize } = require('./models/index')
+const bp = require('body-parser')
 
 const app = express();
 const port = process.env.SERVER_PORT;
+
+//Formatted body 
+app.use(bp.json())
+app.use(bp.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/src/index.html'))
