@@ -2,7 +2,7 @@ const User = require('../../../models/user');
 
 const create = (app) => {
   app.post('/user', (req, res) => {
-    console.log("Reponse : ", req)
+    console.log("Reponse : ", req.body)
     
     if (!req.body.email || !req.body.password) {
         res.status(400).send({
