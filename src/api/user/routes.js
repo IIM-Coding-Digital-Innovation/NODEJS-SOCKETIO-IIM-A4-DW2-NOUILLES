@@ -1,4 +1,6 @@
-const {User} = require('../../../models/user');
+// const User = require('../../../models/user');
+const db = require('../../../models/index');
+const User = db.User;
 
 const create = (app) => {
   app.post('/user', (req, res) => {
