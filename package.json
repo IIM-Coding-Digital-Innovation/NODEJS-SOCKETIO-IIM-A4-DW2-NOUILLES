@@ -4,9 +4,11 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "run": "node app.js",
-    "commit": "cz"
+    "dev": "node_modules/.bin/nodemon -L app.js",
+    "start": "node app.js",
+    "commit": "node_modules/.bin/cz",
+    "test": "node_modules/.bin/jest",
+    "build": "npm install"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,11 @@
   },
   "homepage": "https://github.com/IIM-Creative-Technology/NODEJS-SOCKETIO-IIM-A4-DW2-NOUILLES#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.0"
   },
   "config": {
     "commitizen": {
@@ -30,6 +36,15 @@
   "devDependencies": {
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
-    "nodemon": "^2.0.15"
+    "eslint": "^8.14.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.0.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.2"
   }
 }
