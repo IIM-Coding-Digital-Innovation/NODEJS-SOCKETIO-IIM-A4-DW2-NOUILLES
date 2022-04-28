@@ -8,6 +8,32 @@
     <title>Nouille</title>
 </head>
 <body>
+    <h1>Bienvenue sur le chat</h1>
+    <ul id="message-container">
 
+    </ul>
+    <input type="text" id="input">
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        const messageContainer = document.getElementById('message-container');
+        const input = document.getElementById('input');
+        const socket = io();
+
+        socket.on('messages', (messages) => {
+            messageContainer.innerHTML = "";
+            messages.forEach(message => {
+                messageContainer.innerHTML += "<li>" + message + "</li>";
+            })
+        })
+
+        input.addEventListener('keydown', (e) => {
+            if (input.value !== "") {
+                if (e.keyCode === 13) {
+                    socket.emit("message", input.value);
+                    input.value = "";
+                }
+            }
+        })
+    </script>
 </body>
 </html>
