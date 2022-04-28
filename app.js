@@ -1,5 +1,6 @@
 const express = require('express');
 var http = require('http');
+const { socket } = require('socket.io')
 //const { sequelizeInstance } = require('./utils/database');
 const path = require("path");
 const userAPI = require('./src/api/user/routes');
@@ -7,9 +8,7 @@ const { sequelize } = require('./models/index');
 const bodyParser = require('body-parser');
 const app = express();
 const server = new http.Server(app);
-const io = require('socket.io')(server);
-
-const port = process.env.SERVER_PORT;
+const io = socket(server);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
