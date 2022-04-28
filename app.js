@@ -1,6 +1,6 @@
 const express = require('express');
 var http = require('http');
-const { socket } = require('socket.io')
+const socket = require('socket.io')
 //const { sequelizeInstance } = require('./utils/database');
 const path = require("path");
 const userAPI = require('./src/api/user/routes');
