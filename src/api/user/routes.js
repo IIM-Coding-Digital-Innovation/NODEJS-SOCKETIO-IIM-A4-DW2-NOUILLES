@@ -1,11 +1,36 @@
+// const User = require('../../../models/user');
+const db = require('../../../models/index');
+const User = db.User;
+
 const create = (app) => {
   app.post('/user', (req, res) => {
-    res.send('creating user');
-  });
+    console.log("Reponse : ", req.body)
+    
+    if (!req.body.email || !req.body.password) {
+        res.status(400).send({
+            status: false,
+            message: 'Aucun mot de passe ou mail a été renseigné'
+        });
+    } else {
+        User.create({
+            email: req.body.email,
+            password: req.body.password,
+            role: req.body.role,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname
+
+        }).then((User) => res.status(201).send(User)).catch((error) => {
+            console.log(error);
+            res.status(400).send(error);
+        });
+    }
+})
 };
 const read = (app) => {
   app.get('/user', (req, res) => {
-    res.send('reading user');
+    User.findAll().then((users) => {
+      res.json(users);
+    });
   });
 };
 const update = (app) => {
@@ -15,7 +40,9 @@ const update = (app) => {
 };
 const del = (app) => {
   app.delete('/user', (req, res) => {
-    res.send('deleting user');
+      const idSended = req.body.id;
+      const deletedUser =  User.destroy({ where: {id: idSended} });
+      res.send(deletedUser);
   });
 };
 
