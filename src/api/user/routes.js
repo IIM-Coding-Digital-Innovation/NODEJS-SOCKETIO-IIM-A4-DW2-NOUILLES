@@ -41,7 +41,7 @@ const update = (app) => {
 const del = (app) => {
   app.delete('/user', (req, res) => {
       const idSended = req.body.id;
-      const deletedUser =  User.destroy(idSended);
+      const deletedUser =  User.destroy({ where: {id: idSended} });
       res.send(deletedUser);
   });
 };
