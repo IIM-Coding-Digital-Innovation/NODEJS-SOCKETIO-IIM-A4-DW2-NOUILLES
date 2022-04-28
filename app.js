@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(process.env.DB_PORT || 3000, () => {
+server.listen(5432, () => {
   console.log('Votre app est disponible sur localhost:3000 !');
 });
 
