@@ -28,9 +28,9 @@ const create = (app) => {
 };
 const read = (app) => {
   app.get('/user', (req, res) => {
-    res.send('reading user');
-    const users = await User.findAll();
-    res.send(users);
+    User.findAll().then((users) => {
+      res.json(users);
+    });
   });
 };
 const update = (app) => {
